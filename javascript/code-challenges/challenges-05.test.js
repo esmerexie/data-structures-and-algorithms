@@ -1,5 +1,7 @@
 'use strict';
 
+const { Element } = require("cheerio");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -25,6 +27,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  return arr.reduce((sumT, element) => sumT + element, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,6 +44,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  return arr.reduce((total, item) => total + item.purchasePrice, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,6 +57,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((element) => element + 1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,6 +118,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((element, person) => {
+    element.push(person.name);
+    return element;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,6 +134,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduce((element, v) => v + element, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
