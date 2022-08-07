@@ -43,11 +43,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  for (const [key, value] of Object.entries(obj)){
-    if (value === obj[key]){
-      return true;
-    }
-  }
+  return Object.values(obj).includes(value) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -152,12 +148,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  if (arr.includes(character)){
-    return true;
-  } else {
-    return false;
+  let characterFromArray=arr.find(person=> person.name == character);
+  for (let char of arr){
+    if (char.name == character){
+      characterFromArray = char;
+      return !!(Object.values(characterFromArray).length>3);
+    }
   }
-
 };
 
 /* ------------------------------------------------------------------------------------------------
