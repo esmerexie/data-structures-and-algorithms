@@ -6,6 +6,6 @@
 
 ### Challenge 01
 
-Location: `codechallenges/linkedlist/LinkedListChallenges`
+Location: `java/datastructures`
 
-Method: `linkedListChallenge06()`
+![image](codechallenge1.png)
