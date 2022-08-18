@@ -10,3 +10,4 @@ Location: `java/datastructures`
 
 ![image](codechallenge1.png)
 ![image](codechallenge2.png)
+![image](codechallenge3.png)
